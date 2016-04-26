@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>PRAKTISK</title> <meta name="description=" content="Photographer Lasse Wind - Fashion & Beauty Photography by Lasse Wind – mail@lassewind.dk +45 30324411.">
+</head>
+<body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src="app.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<div class="container" ng-app="LasseWindApp">
+	<div ng-controller="LasseImageController">
+		<h1>
+			<center>
+				<div class="contact" ng-show="$showcontact" ng-click="$showcontact=!$showcontact">
+				+45 30324411 - MAIL@LASSEWIND.DK
+				</div>
+				<div class="logo" ng-click="$showcontact=!$showcontact">
+					{{greeting}}
+					<div class="contact"><a href="http://www.claudicapion.dk" target="_blank">CLAUDI+CAPION</a> +45 30324411 - <a href="mailto:lasse@claudicapion.dk" target="_top">LASSE@CLAUDICAPION.DK</a><br>ESROMGADE 15, ENTRANCE 1, 4th FLOOR</div>
+
+				</div>
+				<div class="contact" >
+					{{contact}}
+				</div>
+				<div class="galleries">
+					<div class="gallery" ng-repeat="gallery in jsonFileContent.gallery">
+						<img class="featImage" src="Gallerier/{{gallery.name}}/{{gallery.gallery[0].name}}" ng-click="gallery.showDetails = !gallery.showDetails">
+						<div class="image" ng-repeat="galleryImages in gallery.gallery" ng-show="gallery.showDetails" ng-if="!$first" ng-click="gallery.showDetails = !gallery.showDetails">
+							<img class="image" src="Gallerier/{{gallery.name}}/{{galleryImages.name}}">
+						</div>
+					</div>
+				</div>
+			</h1>
+		</div>
+	</div>
+	</body>
