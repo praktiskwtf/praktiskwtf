@@ -1,0 +1,70 @@
+body {
+	background-color: #f8f8f8;
+}
+
+.logo {
+	margin-top: -70;
+	width: 100%;
+	position: fixed;
+	font-size: 30;
+	font-family: Didot, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: 100;
+	z-index: 100;
+	float: left;
+	cursor: hand;
+}
+
+a:link {color: black; text-decoration: none;}
+a:active {color: black; text-decoration: none; }
+a:visited {color: black; text-decoration: none; }
+a:hover {color: black; text-decoration: underline; }
+
+.contact {
+	margin-top: 0;
+	width: 100%;
+	position: fixed;
+	font-size: 11;
+	font-family: Didot, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: 100;
+
+}
+.contactlarge {
+	margin-top: 100;
+	max-width: 880;
+	height: 300;
+	background-color: #fff;
+	position: center;
+	font-size: 30;
+	font-family: Didot, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: 100;
+
+}
+
+.contact{ 
+display: none;
+}
+.logo:hover .contact{
+display : block;
+}
+.galleries {
+	margin-top: 100px;
+}
+
+.gallery {
+
+}
+
+.featImage {
+	width: 100%;
+	max-width: 880px;
+	margin-bottom: 50px;
+	cursor: hand;
+}
+
+.image {
+	width: 100%;
+	max-width: 880px;
+	margin-top: -20px;
+	margin-bottom: 25px;
+	cursor: hand;
+}
